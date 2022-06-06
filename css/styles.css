@@ -158,11 +158,9 @@ color: var(--title-text-color);
 }
 /*--/ Our team */
 /* Footer */
-
 .bottom {
     color: #ffffff;
     background-color: var(--background-color-black);
-
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -172,6 +170,7 @@ color: var(--title-text-color);
 
 .bottom .link {
     color: rgba(255 255 255 / .6);
+        font-style: normal;
     text-decoration: none;
 }
 
