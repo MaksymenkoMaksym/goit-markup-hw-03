@@ -18,7 +18,6 @@ body {
 
 button {
     font-family: inherit;
-
     cursor: pointer;
 }
 
@@ -38,14 +37,13 @@ button {
     text-decoration: none;
 }
 .logo-black {
-    color: var(--title-text-color);
+    color: #000000;
 }
 .logo-white {
     color: #ffffff;
 }
 
-.site-nav .link,
-.contacts .link {
+.site-nav .link{
     color: var(--title-text-color);
 
     text-decoration: none;
@@ -68,6 +66,11 @@ button {
 }
 
 .contacts .link {
+color: inherit;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
     text-decoration: none;
 }
 
@@ -75,7 +78,6 @@ button {
 
 .section-title {
     color: var(--title-text-color);
-        font-weight: 700;
         font-size: 36px;
         line-height: 1.17;
         text-align: center;
@@ -84,7 +86,6 @@ button {
 
 .sub-title{
 color: var(--title-text-color);
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -124,8 +125,7 @@ color: var(--title-text-color);
 /*--/ Hero block */
 /*     STRONG PARTS OF THE COMPANY */
 .feature .text{
-    font-family: 'Roboto';
-        font-weight: 400;
+
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
@@ -138,9 +138,6 @@ color: var(--title-text-color);
 .team {
     background-color: var(--background-color-gray);
 
-    font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
         font-size: 16px;
         line-height: 1.19;
         text-align: center;
@@ -151,6 +148,7 @@ color: var(--title-text-color);
 
         font-weight: 500;
         line-height: 1.2;
+        text-align: center;
         text-transform:none;
 }
 
@@ -164,6 +162,11 @@ color: var(--title-text-color);
 .bottom {
     color: #ffffff;
     background-color: var(--background-color-black);
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
 
@@ -172,7 +175,14 @@ color: var(--title-text-color);
     text-decoration: none;
 }
 
-/* Portfolio */
+.bottom .street{
+        color: inherit;
+}
+
+
+
+
+/* Portfolio-Page */
 
 .button-filter {
     color: var(--title-text-color);
@@ -180,7 +190,7 @@ color: var(--title-text-color);
 
         font-weight: 500;
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 1.62;
         text-align: center;
         letter-spacing: 0.03em;
 }
@@ -189,11 +199,9 @@ color: var(--title-text-color);
 .button-filter:focus {
     color: #ffffff;
     background-color: var(--accent-color);
-    text-align: end;
 }
 
 .portfolio .sub-title{
-font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -201,8 +209,7 @@ font-weight: 700;
 }
 
 .portfolio .text{
-        font-weight: 400;
         font-size: 16px;
-        line-height: 1.9;
+        line-height: 1.88;
         letter-spacing: 0.03em;   
 }
