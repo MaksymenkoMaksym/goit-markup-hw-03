@@ -156,6 +156,7 @@ color: var(--title-text-color);
 
 .team-bg {
     background-color: var(--background-color-white);
+    width: 270px;
 }
 /*--/ Our team */
 /* Footer */
