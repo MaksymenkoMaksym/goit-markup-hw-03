@@ -90,7 +90,6 @@ color: var(--title-text-color);
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
 }
 
 
@@ -135,9 +134,11 @@ color: var(--title-text-color);
 /* --/ STRONG PARTS OF THE COMPANY */
 
 /*   Our team */
-.team {
+.section.team{
     background-color: var(--background-color-gray);
+}
 
+.team .text {
         font-size: 16px;
         line-height: 1.19;
         text-align: center;
@@ -145,17 +146,18 @@ color: var(--title-text-color);
 }
 
 .team .sub-title{
-
         font-weight: 500;
-        line-height: 1.2;
+        font-size: 16px;
+        line-height: 1.19;
         text-align: center;
         text-transform:none;
 }
 
-.team-bg {
+.team .mate{
     background-color: var(--background-color-white);
     width: 270px;
 }
+
 /*--/ Our team */
 /* Footer */
 .bottom {
@@ -198,6 +200,12 @@ color: var(--title-text-color);
 .button-filter:focus {
     color: #ffffff;
     background-color: var(--accent-color);
+}
+
+.portfolio .link{
+    color: var(--main-text-color);
+
+    text-decoration: none;
 }
 
 .portfolio .sub-title{
