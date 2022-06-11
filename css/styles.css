@@ -22,13 +22,14 @@ button {
 }
 
 img {
-    outline: 1px solid red;
-
     display: block;
-    max-width: 100%;
+    min-width: 100%;
     height: auto;
 }
-
+h1,h2,h3,h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
 .list {
     padding: 0;
     margin: 0;
@@ -59,8 +60,14 @@ img {
 .contacts.panel{
     margin-left: auto;
 }
+
+.contacts {
+    display: flex;
+    justify-content: end;
+}
 /* Site navigation */
-.logo {
+.main-nav .logo,
+.bottom .logo {
     color: var(--accent-color);
 
     font-family: 'Raleway';
@@ -70,10 +77,10 @@ img {
     letter-spacing: 0.03em;
     text-decoration: none;
 }
-.logo-black {
+.main-nav .logo-black {
     color: #000000;
 }
-.logo-white {
+.bottom .logo-white {
     color: #ffffff;
 }
 
@@ -81,24 +88,31 @@ img {
     display: flex;
     margin-left: 93px;
 }
-.site-nav .item:not(:last-child){
-    outline: 1px solid greenyellow;
+.site-nav .item:not(:last-child),
+.contacts .item:not(:last-child) {
+    background-color:  greenyellow;
  
     margin-right: 50px;
 }
 
-.site-nav .link{
-display: block;
-padding-top: 32px;
-padding-bottom: 32px;
+.site-nav .link,
+.contacts .link{
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
 }
+
+.contacts .link {
+    color: inherit;
+}
+
 
 .link.current {
     color: var(--accent-color);
@@ -112,31 +126,13 @@ padding-bottom: 32px;
 .bottom .link:focus {
     color: var(--accent-color);
 }
-.contacts{
-    display: flex;
-    justify-content: end;
-}
 
-.contacts .link {
-    display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
-
-color: inherit;
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    text-decoration: none;
-}
-
-.contacts .item +.item {
-    outline: 1px solid gold;
-    margin-left: 50px;
-}
 /* Main section */
 
 .section-title {
+    margin: 0;
+
+
     color: var(--title-text-color);
         font-size: 36px;
         line-height: 1.17;
@@ -169,9 +165,7 @@ color: var(--title-text-color);
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
-.hero .centre{
-    text-align: center;
-}
+
 
 .section.hero {
     outline: 2px solid red;
@@ -195,7 +189,6 @@ color: var(--title-text-color);
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-   
 }
 
 /*--/ Hero block */
@@ -240,16 +233,16 @@ color: var(--title-text-color);
 /* --/ STRONG PARTS OF THE COMPANY */
  /* --------OUR JOB --------*/
  .container .our-job{
-    outline: 1px solid red;
-     margin: 94px 0;
- }
-.our-job .section-title{
-    outline: 1px solid red;
-    margin: 0 auto 50px;
-}
+    background-color: darkslategrey;
 
-.our-job .wrapper{
+     margin-top: 94px;
+     margin-bottom: 94px;
+ }
+
+
+.our-job .flex-container{
     display: flex;
+    padding-top: 50px;
 }
 
 .our-job .item:not(:last-child){
@@ -266,8 +259,19 @@ color: var(--title-text-color);
     padding: 94px 0;
     text-align: center;
 }
+.team .flex-container{
+display: flex;
+}
 
 
+.team .item {
+    width: calc((100%-90px)/4);
+
+    background-color: var(--background-color-white);
+}
+.team .item + .item{
+    margin-left: 30px;
+}
 .team .section-title{
     outline: 1px solid red;
     margin: 0 0 50px;
@@ -292,22 +296,14 @@ color: var(--title-text-color);
     line-height: 1.19;
     letter-spacing: 0.03em;
 }
-.team .mate{
-    outline: 1px solid red;
 
-    display: inline-block;
-    width: 270px;
 
-    background-color: var(--background-color-white);
+.item .text-wrapper{
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
 }
 
-.mate .text-wrapper{
-    padding: 30px 0;
-
-}
-.right-padding{
-padding-right: 30px;
-}
 /*--/ Our team */
 /* Footer */
 .bottom {
@@ -331,7 +327,7 @@ padding-right: 30px;
     margin-bottom: 9px;
 }
 .bottom .link {
-    display: inline-block;
+    display: block;
     color: rgba(255 255 255 / .6);
         font-style: normal;
     text-decoration: none;
@@ -345,16 +341,26 @@ padding-right: 30px;
 
 
 /* Portfolio-Page */
+.portfolio .hidden-element{
+    margin: 0;
+}
 .porfolio-header{
     border-bottom: 1px solid #ECECEC;
 }
 
-.filter{
-    display: flex;
+.filter.flex-container{
+display:flex;
+justify-content:center;
+}
+.filter .item:not(:last-child){
+    margin-right: 8px;
 }
 .button-filter {
+    padding: 6px 22px;
     color: var(--title-text-color);
     background-color: #F5F4FA;
+    border-radius: 4px;
+    border: 1px transparent;
 
         font-weight: 500;
         font-size: 16px;
@@ -368,6 +374,37 @@ padding-right: 30px;
     color: #ffffff;
     background-color: var(--accent-color);
 }
+/* Examples of Job */
+.section.portfolio{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.portfolio.flex-container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio .flex-item{
+    width: calc((100% - 60px)/3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio .flex-item:nth-child(3n){
+    margin-right: 0;
+}
+
+.portfolio .flex-item:not(:nth-child(-n + 6)){
+margin-bottom: 0;
+}
+
+.portfolio .text-block{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
+    border: 1px solid #EEEEEE;;
+}
 
 .portfolio .link{
     color: var(--main-text-color);
@@ -376,6 +413,8 @@ padding-right: 30px;
 }
 
 .portfolio .sub-title{
+   margin-bottom: 4px;
+
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -383,7 +422,7 @@ padding-right: 30px;
 }
 
 .portfolio .text{
-        font-size: 16px;
-        line-height: 1.88;
-        letter-spacing: 0.03em;   
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;   
 }
